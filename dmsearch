@@ -8,10 +8,7 @@
 # !! Warning: be sure to change the dmbrowser variable to your preffered web browser, 
 # example - for Brave change to brave, for Google Chrome change to chrome etc.
 
-import random
 import os
-import sys
-import subprocess
 from typing import SupportsAbs
 from rofi import Rofi 
 
