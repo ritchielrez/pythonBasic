@@ -1,3 +1,10 @@
+# This script lets you to search in different 
+# search engines. 
+#############################################
+# Requirments: rofi(input prompt), python-rofi(to interface with rofi from python), and of-coourse Linux!!
+#############################################
+# !! Warning: be sure to change the dmbrowser variable to your preffered web browser, example - for Brave change to brave, for Google Chrome change to chrome etc.
+
 import random
 import os
 import sys
