@@ -2,11 +2,12 @@ import random
 import os
 import sys
 import subprocess
+from typing import SupportsAbs
 from rofi import Rofi 
 
 if __name__ == '__main__':
     dmbrowser = 'firefox'
-    r = Rofi()
+    r = Rofi(rofi_args=['-dpi', '1.25'])
 
     options = [
 "amazon - https://www.amazon.com/s?k=",
@@ -48,8 +49,19 @@ if __name__ == '__main__':
 "quit" ]
     
     engine = 0
-    i = 0
+    query = 0
+    engineurl = 0
 
-    if (engine == 0):
-        engine, key = r.select('Choose a search engine:', options)
-        print(key)
+    while (engine == 0):
+        enginelist, key = r.select('Choose a search engine', options)
+
+        engineurl = options[enginelist].split()[-1]
+
+        engine = options[enginelist].split()[0]
+        
+        print(engine)
+
+    while (query == 0):
+        query = r.text_entry('Searching ' + engine)
+    
+    os.system(f"{dmbrowser} {engineurl}{query}") 
