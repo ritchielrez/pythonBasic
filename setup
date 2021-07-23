@@ -1,7 +1,10 @@
-#!/usr/bin/python3
+#!/bin/sh
 
 # Put my scripts to my sciprts directory
 # so I can run scripts without typing the
 # whole script path
+
+ln -s ~/pythonBasic/dmsearch ~/.local/bin/dmsearch
+
 
 
