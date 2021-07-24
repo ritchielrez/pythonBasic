@@ -9,7 +9,6 @@
 # example - for Brave change to brave, for Google Chrome change to chrome etc.
 
 import os
-from typing import SupportsAbs
 from rofi import Rofi 
 
 if __name__ == '__main__':
