@@ -75,5 +75,15 @@ if __name__ == '__main__':
 
     while (query == 0):
         query = r.text_entry('Searching ' + engine)
-    
-    os.system(f"{dmbrowser} {engineurl}{query}") 
+        querylist = list(str(query).split())
+
+    squery = ''
+
+    for i in range(len(querylist)):
+        if i != 0:
+            squery = f"{squery}+{querylist[i]}"
+        else:
+            squery = querylist[i]
+
+    # print(squery)
+    os.system(f"{dmbrowser} {engineurl}{squery}") 

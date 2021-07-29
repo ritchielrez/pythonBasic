@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+from dimbrightness import dimbrightness
+from undimbrightness import undimbrightness
+import os
+
+if __name__ == '__main__':
+
+    os.system('xbacklight -get > currentbrightness.txt')
+
+    with open('currentbrightness.txt', 'r') as currentbrightness:
+        currentbrightness = currentbrightness.read()
+
+        if (currentbrightness != 0):
+            dimbrightness()
+
+        if(currentbrightness == 0):
+            undimbrightness()
