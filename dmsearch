@@ -6,15 +6,20 @@
 # and of-course Linux!!
 #############################################
 # !! Warning: be sure to change the dmbrowser variable to your preffered web browser, 
-# example - for Brave change to brave, for Google Chrome change to chrome etc.
+# Example - for Brave browser, change to brave, for Google Chrome change to chrome etc.
 
 import os
 from rofi import Rofi 
 
 if __name__ == '__main__':
     dmbrowser = 'firefox'
+
+    # setting up arguments for rofi prompt so it accepts
+    # case-insensitive words, shows a bigger prompt(125% scaled, thats what -dpi 1.25 mean)
+    # and use JetBrainsMono Nerd Font(you can change it and also choose your preffered font size, default 12)
     r = Rofi(rofi_args=['-font', 'JetBrainsMono NF 12', '-i', '-dpi', '1.25'])
 
+    # options array, containing list of search engines(kinda),but also the first of the earch engine link
     options = [
 "amazon - https://www.amazon.com/s?k=",
 "archaur - https://aur.archlinux.org/packages/?O=0&K=",
@@ -61,6 +66,7 @@ if __name__ == '__main__':
     while (engine == 0):
         enginelist, key = r.select('Choose a search engine', options)
 
+        # If users hit the escape key
         if key == -1:
             exit(1)
 
@@ -75,7 +81,12 @@ if __name__ == '__main__':
 
     while (query == 0):
         query = r.text_entry('Searching ' + engine)
+
         querylist = list(str(query).split())
+
+    # If users decide to leave after choosing a search engine by hitting escape
+    if str(query) == 'None':
+        exit(1)
 
     squery = ''
 
