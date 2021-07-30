@@ -5,7 +5,7 @@ import subprocess
 from rofi import Rofi
 
 if __name__ == '__main__':
-    r = Rofi(rofi_args=['-i', '-dpi', '1.25'])
+    r = Rofi(rofi_args=['-font', 'JetBrainsMono NF 12', '-i', '-dpi', '1.25'])
 
     options = [' Shutdown', ' Reboot', ' Logout', 'quit']
 

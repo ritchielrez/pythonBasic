@@ -13,7 +13,7 @@ from rofi import Rofi
 
 if __name__ == '__main__':
     dmbrowser = 'firefox'
-    r = Rofi(rofi_args=['-dpi', '1.25'])
+    r = Rofi(rofi_args=['-font', 'JetBrainsMono NF 12', '-i', '-dpi', '1.25'])
 
     options = [
 "amazon - https://www.amazon.com/s?k=",
