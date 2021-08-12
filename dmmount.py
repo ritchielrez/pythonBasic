@@ -3,7 +3,6 @@
 # Unmounting script for Linux 
 
 import os
-import subprocess
 from rofi import Rofi
 
 if __name__ == '__main__':
