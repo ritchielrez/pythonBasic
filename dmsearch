@@ -98,5 +98,4 @@ if __name__ == '__main__':
         else:
             squery = querylist[i]
 
-    # print(squery)
-    os.system(f"{dmbrowser} {engineurl}{squery}") 
+    os.system(f"{browser} {engineurl}{squery}") 
