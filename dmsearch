@@ -20,7 +20,8 @@ if __name__ == '__main__':
     # and use JetBrainsMono Nerd Font(you can change it and also choose your preffered font size, default 12)
     r = Rofi(rofi_args=['-font', 'JetBrainsMono NF 12', '-i', '-dpi', '1.25'])
 
-    # options array, containing list of search engines(kinda),but also the first of the earch engine link
+    # options array, containing list of search engines(kinda), but also the link used by search engines, except 
+    # the part of the search query
     options = [
 "amazon - https://www.amazon.com/s?k=",
 "archaur - https://aur.archlinux.org/packages/?O=0&K=",
