@@ -9,7 +9,7 @@
 # Example - for Brave browser, change to brave, for Google Chrome change to chrome etc.
 
 import os
-from rofi import Rofi 
+from rofi import Rofi
 
 if __name__ == '__main__':
 
@@ -60,11 +60,11 @@ if __name__ == '__main__':
 "wolfram - https://www.wolframalpha.com/input/?i=",
 "youtube - https://www.youtube.com/results?search_query=",
 "quit" ]
-    
+
     engine = 0
     query = 0
     engineurl = 0
-    
+
     while (engine == 0):
         enginelist, key = r.select('Choose a search engine', options)
 
@@ -78,7 +78,7 @@ if __name__ == '__main__':
         engineurl = options[enginelist].split()[-1]
 
         engine = options[enginelist].split()[0]
- 
+
         print(engine)
 
     while (query == 0):
@@ -98,4 +98,4 @@ if __name__ == '__main__':
         else:
             squery = querylist[i]
 
-    os.system(f"{browser} {engineurl}{squery}") 
+    os.system(f"{browser} {engineurl}{squery}")
