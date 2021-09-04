@@ -13,14 +13,14 @@ if __name__ == '__main__':
 
     option, key = r.select('What do you want to do', options)
 
-    if(key == -1):
+    if (key == -1):
         exit(1)
 
-    if(option == 0):
+    if (option == 0):
         os.system('shutdown now')
-    elif(option == 1):
+    elif (option == 1):
         os.system('reboot')
-    elif(option == 2):
+    elif (option == 2):
         os.system('systemctl restart sddm')
 
 
