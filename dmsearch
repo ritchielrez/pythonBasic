@@ -79,8 +79,6 @@ if __name__ == '__main__':
 
         engine = options[enginelist].split()[0]
 
-        print(engine)
-
     while (query == 0):
         query = r.text_entry('Searching ' + engine)
 
